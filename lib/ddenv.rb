@@ -3,6 +3,7 @@
 require_relative "ddenv/version"
 
 module Ddenv
-  class Error < StandardError; end
-  # Your code goes here...
+  def self.call
+    puts "ddenv #{Ddenv::VERSION}"
+  end
 end
