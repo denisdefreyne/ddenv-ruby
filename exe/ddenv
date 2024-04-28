@@ -3,4 +3,4 @@
 
 require "ddenv"
 
-Ddenv.call
+Ddenv::CLI.new(ARGV).call
