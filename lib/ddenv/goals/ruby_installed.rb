@@ -31,12 +31,18 @@ module Ddenv
 
       def post_goals
         [
-          ShadowenvInitialized.new
+          RubyShadowenvCreated.new(ruby_pathname.to_s, @ruby_version)
         ]
       end
 
       def props
         [@ruby_version]
+      end
+
+      private
+
+      def ruby_pathname
+        @_ruby_pathname ||= Pathname.new(Dir.home) / ".rubies" / "ruby-#{@ruby_version}"
       end
     end
   end
