@@ -8,17 +8,22 @@ module Ddenv
 
         all_goals = config.goals.flat_map(&:with_pre_and_post_goals).uniq
 
+        max_message_size = all_goals.map { _1.message.size }.max
+
         all_goals.each do |goal|
-          puts goal.message
-          puts "  Checking..."
+          spinner = TTY::Spinner.new("[:spinner] :message... :title")
+          spinner.update(message: format("%-#{max_message_size}s", goal.message))
+          spinner.update(title: "checking")
+          spinner.auto_spin
+
           if goal.achieved?
-            puts "  Already achieved."
+            spinner.update(title: "done (previously achieved)")
           else
-            puts "  Achieving..."
+            spinner.update(title: "working...")
             goal.achieve
-            puts "  Newly achieved."
+            spinner.update(title: "done (newly achieved)")
           end
-          puts
+          spinner.success
         end
       end
     end

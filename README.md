@@ -22,14 +22,14 @@ Lastly, run `ddenv up`.
 
 ```
 % ddenv up
-Installing Homebrew package overmind...     ok
-Installing Homebrew package ruby-install... ok
-Installing Ruby v3.3.0...                   ok
-Initializing Shadowenv...                   ok
-Creating .shadowenv.d...                    ok
-Adding .shadowenv.d to .gitignore...        ok
-Trusting .shadowenv.d...                    ok
-Adding Ruby to shadowenv...                 ok
+[✔] Installing Homebrew package overmind    ... done (previously achieved)
+[✔] Installing Homebrew package ruby-install... done (previously achieved)
+[✔] Installing Ruby v3.3.0                  ... done (previously achieved)
+[✔] Initializing Shadowenv                  ... done (previously achieved)
+[✔] Creating .shadowenv.d                   ... done (previously achieved)
+[✔] Adding .shadowenv.d to .gitignore       ... done (previously achieved)
+[✔] Trusting .shadowenv.d                   ... done (previously achieved)
+[✔] Adding Ruby to shadowenv                ... done (previously achieved)
 %
 ```
 

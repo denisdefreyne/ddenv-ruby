@@ -4,6 +4,7 @@ require "json"
 require "yaml"
 
 require "tty-command"
+require "tty-spinner"
 
 require_relative "ddenv/cli"
 require_relative "ddenv/command"
