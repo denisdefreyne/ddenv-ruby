@@ -26,6 +26,7 @@ up:
   - ruby: 3.3.0
   - bundle
   - node: 20.12.2
+  - npm
 ```
 
 Lastly, run `ddenv up`.
@@ -45,6 +46,7 @@ Lastly, run `ddenv up`.
 [✔] Installing Homebrew package node-build     done (previously achieved)
 [✔] Installing Node v20.12.2                   done (previously achieved)
 [✔] Adding Node to shadowenv                   done (previously achieved)
+[✔] Installing npm packages                    done (previously achieved)
 %
 ```
 
@@ -55,5 +57,6 @@ Now your local developer environment is ready to be used.
 - <code>homebrew: <var>PACKAGENAME</var></code> installs the Homebrew package with the given name.
 - <code>ruby</code> installs Ruby (with the version specified in the `.ruby-version`
   file).
-- <code>bundle</code> runs `bundle install`
-- <code>node: <var>VERSION</var></code> installs the give Node.js version
+- <code>bundle</code> runs `bundle install`.
+- <code>node: <var>VERSION</var></code> installs the give Node.js version.
+- <code>npm</code> installs packages from package.json using npm.
