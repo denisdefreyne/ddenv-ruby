@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 require "json"
+require "yaml"
+
 require "tty-command"
 
 require_relative "ddenv/cli"
 require_relative "ddenv/command"
+require_relative "ddenv/config"
 require_relative "ddenv/goal"
 require_relative "ddenv/homebrew"
 require_relative "ddenv/subclass_responsibility_error"
