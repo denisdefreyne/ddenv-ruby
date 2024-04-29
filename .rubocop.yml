@@ -14,3 +14,6 @@ Style/Documentation:
 
 Metrics:
   Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required

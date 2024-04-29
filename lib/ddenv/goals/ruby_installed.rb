@@ -29,6 +29,12 @@ module Ddenv
         ]
       end
 
+      def post_goals
+        [
+          ShadowenvInitialized.new
+        ]
+      end
+
       def props
         [@ruby_version]
       end
