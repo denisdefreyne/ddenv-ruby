@@ -33,21 +33,22 @@ Lastly, run `ddenv up`.
 
 ```
 % ddenv up
-[✔] Installing Homebrew package overmind       done (previously achieved)
-[✔] Installing Homebrew package ruby-install   done (previously achieved)
-[✔] Installing Ruby v3.3.0                     done (previously achieved)
-[✔] Initializing Shadowenv                     done (previously achieved)
-[✔] Creating .shadowenv.d                      done (previously achieved)
-[✔] Adding .shadowenv.d to .gitignore          done (previously achieved)
-[✔] Trusting .shadowenv.d                      done (previously achieved)
-[✔] Adding Ruby to shadowenv                   done (previously achieved)
-[✔] Installing Ruby gem bundler                done (previously achieved)
-[✔] Installing bundle                          done (previously achieved)
-[✔] Installing Homebrew package node-build     done (previously achieved)
-[✔] Installing Node v20.12.2                   done (previously achieved)
-[✔] Adding Node to shadowenv                   done (previously achieved)
-[✔] Installing npm packages                    done (previously achieved)
-%
+ ~/D/2/2/1/ddenv  main  be exe/ddenv up
+┌ [|] up
+├── [✔] Installing Homebrew package overmind       done (previously achieved)
+├── [✔] Installing Homebrew package ruby-install   done (previously achieved)
+├── [✔] Installing Ruby v3.3.0                     done (previously achieved)
+├── [✔] Initializing Shadowenv                     done (previously achieved)
+├── [✔] Creating .shadowenv.d                      done (previously achieved)
+├── [✔] Adding .shadowenv.d to .gitignore          done (previously achieved)
+├── [✔] Trusting .shadowenv.d                      done (previously achieved)
+├── [✔] Adding Ruby to shadowenv                   done (previously achieved)
+├── [✔] Installing Ruby gem bundler                done (previously achieved)
+├── [|] Installing bundle                          working...
+├── [|] Installing Homebrew package node-build     pending
+├── [|] Installing Node v20.12.2                   pending
+├── [|] Adding Node to shadowenv                   pending
+└── [|] Installing npm packages                    pending
 ```
 
 Now your local developer environment is ready to be used.
