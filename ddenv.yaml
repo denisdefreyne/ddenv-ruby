@@ -3,3 +3,4 @@ up:
   - ruby
   - bundle
   - node: 20.12.2
+  - npm

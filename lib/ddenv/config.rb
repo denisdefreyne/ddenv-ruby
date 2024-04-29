@@ -31,6 +31,10 @@ module Ddenv
           Goals::NodeInstalled.new(value)
         when "bundle"
           Goals::BundleInstalled.new
+        when "npm"
+          Goals::NpmPackesInstalled.new
+        else
+          raise "unknown key: #{key}"
         end
       end
     end
