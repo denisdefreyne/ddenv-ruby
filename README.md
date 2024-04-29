@@ -1,39 +1,24 @@
-# Ddenv
+# ddenv
 
-TODO: Delete this and the text below, and describe your gem
+**ddenv** (*Denis’ Developer Environment*) is a tool for maintaining a local
+environment for development.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ddenv`. To experiment with that code, run `bin/console` for an interactive prompt.
+> [!CAUTION]
+> This software is a pre-alpha work in progress. Do not use just yet.
 
-## Installation
+## Quick start
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Install it: `brew install denisdefreyne/ddenv/ddenv`.
 
-Install the gem and add to the application's Gemfile by executing:
+Next, create a `dev.yml` file which contains the list of dependencies to manage:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+```yaml
+up:
+  - homebrew: overmind
+  - ruby: 3.3.0
+```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+> [!NOTE]
+> dev.yml will be renamed to ddenv.yaml soon.
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ddenv. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/ddenv/blob/main/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Ddenv project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/ddenv/blob/main/CODE_OF_CONDUCT.md).
+Lastly, run `ddenv up`.
