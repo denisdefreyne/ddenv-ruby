@@ -49,5 +49,6 @@ Now your local developer environment is ready to be used.
 ## Goals
 
 - <code>homebrew: <var>PACKAGENAME</var></code> installs the Homebrew package with the given name.
-- <code>ruby: <var>VERSION</var></code> installs the given version of Ruby.
+- <code>ruby</code> installs Ruby (with the version specified in the `.ruby-version`
+  file).
 - <code>bundle</code> runs `bundle install`

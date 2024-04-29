@@ -3,24 +3,19 @@
 module Ddenv
   module Goals
     class RubyInstalled < Goal
-      def initialize(ruby_version)
-        super()
-        @ruby_version = ruby_version
-      end
-
       def message
-        "Installing Ruby v#{@ruby_version}"
+        "Installing Ruby v#{ruby_version}"
       end
 
       def achieved?
-        pathname = Pathname.new(Dir.home) / ".rubies" / "ruby-#{@ruby_version}"
+        pathname = Pathname.new(Dir.home) / ".rubies" / "ruby-#{ruby_version}"
         pathname.directory?
       end
 
       def achieve
         # TODO: use :pretty when passing --verbose
         cmd = TTY::Command.new(printer: :null)
-        cmd.run("ruby-install", "--cleanup", @ruby_version)
+        cmd.run("ruby-install", "--cleanup", ruby_version)
       end
 
       def pre_goals
@@ -31,18 +26,22 @@ module Ddenv
 
       def post_goals
         [
-          RubyShadowenvCreated.new(ruby_pathname.to_s, @ruby_version)
+          RubyShadowenvCreated.new(ruby_pathname.to_s, ruby_version)
         ]
       end
 
       def props
-        [@ruby_version]
+        [ruby_version]
       end
 
       private
 
+      def ruby_version
+        @_ruby_version ||= File.read(".ruby-version").chomp
+      end
+
       def ruby_pathname
-        @_ruby_pathname ||= Pathname.new(Dir.home) / ".rubies" / "ruby-#{@ruby_version}"
+        @_ruby_pathname ||= Pathname.new(Dir.home) / ".rubies" / "ruby-#{ruby_version}"
       end
     end
   end
