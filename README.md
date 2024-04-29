@@ -24,6 +24,7 @@ Next, create a `ddenv.yaml` file which contains the list of dependencies to mana
 up:
   - homebrew: overmind
   - ruby: 3.3.0
+  - bundle
 ```
 
 Lastly, run `ddenv up`.
