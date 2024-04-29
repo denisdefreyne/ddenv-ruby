@@ -11,3 +11,6 @@ Style/StringLiteralsInInterpolation:
 
 Style/Documentation:
   Enabled: false
+
+Metrics:
+  Enabled: false

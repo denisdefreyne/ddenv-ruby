@@ -16,6 +16,8 @@ module Ddenv
       case command_name
       when "help"
         Ddenv::Commands::Help.new.call
+      when "up"
+        Ddenv::Commands::Up.new.call
       else
         warn "ddenv: unknown command: #{command_name}"
         exit 64 # EX_USAGE
