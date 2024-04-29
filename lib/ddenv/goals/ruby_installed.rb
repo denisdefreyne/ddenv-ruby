@@ -30,10 +30,6 @@ module Ddenv
         ]
       end
 
-      def props
-        [ruby_version]
-      end
-
       private
 
       def ruby_version

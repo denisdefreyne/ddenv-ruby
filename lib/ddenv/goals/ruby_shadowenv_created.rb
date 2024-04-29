@@ -33,6 +33,10 @@ module Ddenv
         ]
       end
 
+      def props
+        [@ruby_version, @ruby_path]
+      end
+
       private
 
       def shadowenv_contents
