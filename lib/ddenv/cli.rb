@@ -8,13 +8,13 @@ module Ddenv
 
     def call
       if @args.size != 1
-        warn 'usage: ddenv [command]'
+        warn "usage: ddenv [command]"
         exit 64 # EX_USAGE
       end
 
       command_name = @args.first
       case command_name
-      when 'help'
+      when "help"
         Ddenv::Commands::Help.new.call
       else
         warn "ddenv: unknown command: #{command_name}"
