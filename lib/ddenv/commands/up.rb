@@ -6,7 +6,9 @@ module Ddenv
       def call
         config = Ddenv::Config.read_from_file("dev.yml")
 
-        config.goals.each do |goal|
+        all_goals = config.goals.flat_map(&:with_pre_and_post_goals).uniq
+
+        all_goals.each do |goal|
           puts goal.message
           puts "  Checking..."
           if goal.achieved?

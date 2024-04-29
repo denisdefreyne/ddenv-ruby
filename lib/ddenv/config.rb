@@ -26,6 +26,10 @@ module Ddenv
         case key
         when "homebrew"
           Goals::HomebrewPackageInstalled.new(value)
+        when "ruby-install"
+          Goals::RubyInstallInstalled.new
+        when "ruby"
+          Goals::RubyInstalled.new(value)
         end
       end
     end

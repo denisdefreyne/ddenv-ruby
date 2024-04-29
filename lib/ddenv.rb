@@ -17,3 +17,5 @@ require_relative "ddenv/commands/help"
 require_relative "ddenv/commands/up"
 
 require_relative "ddenv/goals/homebrew_package_installed"
+require_relative "ddenv/goals/ruby_install_installed"
+require_relative "ddenv/goals/ruby_installed"

@@ -3,6 +3,8 @@
 module Ddenv
   module Goals
     class HomebrewPackageInstalled < Goal
+      attr_reader :package_name
+
       def initialize(package_name)
         super()
         @package_name = package_name
@@ -20,6 +22,10 @@ module Ddenv
         # TODO: use :pretty when passing --verbose
         cmd = TTY::Command.new(printer: :null)
         cmd.run("brew", "install", @package_name)
+      end
+
+      def props
+        [@package_name]
       end
     end
   end
