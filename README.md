@@ -10,7 +10,7 @@ environment for development.
 
 Install it: `brew install denisdefreyne/ddenv/ddenv`.
 
-Next, create a `dev.yml` file which contains the list of dependencies to manage:
+Next, create a `ddenv.yaml` file which contains the list of dependencies to manage:
 
 ```yaml
 up:
@@ -18,7 +18,19 @@ up:
   - ruby: 3.3.0
 ```
 
-> [!NOTE]
-> dev.yml will be renamed to ddenv.yaml soon.
-
 Lastly, run `ddenv up`.
+
+```
+% ddenv up
+Installing Homebrew package vim...          ok
+Installing Homebrew package ruby-install... ok
+Installing Ruby v3.3.0...                   ok
+Initializing Shadowenv...                   ok
+Creating .shadowenv.d...                    ok
+Adding .shadowenv.d to .gitignore...        ok
+Trusting .shadowenv.d...                    ok
+Adding Ruby to shadowenv...                 ok
+%
+```
+
+Now your local developer environment is ready to be used.
