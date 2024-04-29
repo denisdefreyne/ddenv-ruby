@@ -27,6 +27,8 @@ module Ddenv
           Goals::HomebrewPackageInstalled.new(value)
         when "ruby"
           Goals::RubyInstalled.new
+        when "node"
+          Goals::NodeInstalled.new(value)
         when "bundle"
           Goals::BundleInstalled.new
         end
