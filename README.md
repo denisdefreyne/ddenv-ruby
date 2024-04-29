@@ -33,7 +33,6 @@ Lastly, run `ddenv up`.
 
 ```
 % ddenv up
- ~/D/2/2/1/ddenv  main  be exe/ddenv up
 ┌ [|] up
 ├── [✔] Installing Homebrew package overmind       done (previously achieved)
 ├── [✔] Installing Homebrew package ruby-install   done (previously achieved)
