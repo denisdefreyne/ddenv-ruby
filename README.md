@@ -6,6 +6,14 @@ environment for development.
 > [!CAUTION]
 > This software is a pre-alpha work in progress. Do not use just yet.
 
+## Requirements
+
+- Homebrew
+- fish shell
+
+> [!NOTE]
+> In the future, this will work for bash and zsh as well.
+
 ## Quick start
 
 Install it: `brew install denisdefreyne/ddenv/ddenv`.
