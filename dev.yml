@@ -1,4 +1,4 @@
 up:
   - homebrew: vim
-  - homebrew: ruby
-  - homebrew: shadowenv
+  - homebrew: font-roboto
+  - homebrew: font-roboto-mono
