@@ -11,7 +11,7 @@ module Ddenv
         max_message_size = all_goals.map { _1.message.size }.max
 
         all_goals.each do |goal|
-          spinner = TTY::Spinner.new("[:spinner] :message... :title")
+          spinner = TTY::Spinner.new("[:spinner] :message   :title")
           spinner.update(message: format("%-#{max_message_size}s", goal.message))
           spinner.update(title: "checking")
           spinner.auto_spin
