@@ -1,3 +1,4 @@
 up:
   - homebrew: overmind
   - ruby: 3.3.0
+  - bundle

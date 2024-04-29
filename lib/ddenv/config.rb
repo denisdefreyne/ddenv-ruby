@@ -19,8 +19,7 @@ module Ddenv
           when Hash
             [element.keys.first, element.values.first]
           when String
-            # TODO: for later
-            # (when a goal has no extra details)
+            [element, nil]
           end
 
         case key
@@ -28,6 +27,8 @@ module Ddenv
           Goals::HomebrewPackageInstalled.new(value)
         when "ruby"
           Goals::RubyInstalled.new(value)
+        when "bundle"
+          Goals::BundleInstalled.new
         end
       end
     end
