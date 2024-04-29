@@ -42,3 +42,8 @@ Lastly, run `ddenv up`.
 ```
 
 Now your local developer environment is ready to be used.
+
+## Goals
+
+- <code>homebrew: <var>PACKAGENAME</var></code> installs the Homebrew package with the given name.
+- <code>ruby: <var>VERSION</var></code> installs the given version of Ruby.
