@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Creates and maintains an environment for local development, including Ruby and Node versions."
   spec.homepage = "https://github.com/denisdefreyne/ddenv"
   spec.license = "MIT"
-  spec.required_ruby_version = "~> 2.6"
+  spec.required_ruby_version = "~> 3.3"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
