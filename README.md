@@ -22,7 +22,7 @@ Lastly, run `ddenv up`.
 
 ```
 % ddenv up
-Installing Homebrew package vim...          ok
+Installing Homebrew package overmind...     ok
 Installing Homebrew package ruby-install... ok
 Installing Ruby v3.3.0...                   ok
 Initializing Shadowenv...                   ok
