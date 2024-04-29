@@ -26,7 +26,7 @@ module Ddenv
 
       def post_goals
         [
-          RubyShadowenvCreated.new(ruby_pathname.to_s, ruby_version)
+          RubyShadowenvCreated.new(ruby_version, ruby_pathname.to_s)
         ]
       end
 

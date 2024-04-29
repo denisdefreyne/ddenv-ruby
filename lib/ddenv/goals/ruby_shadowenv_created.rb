@@ -7,6 +7,7 @@ module Ddenv
 
       def initialize(ruby_version, ruby_path)
         super()
+
         @ruby_version = ruby_version
         @ruby_path = ruby_path
       end
