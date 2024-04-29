@@ -10,11 +10,21 @@ module Ddenv
 
         max_message_size = all_goals.map { _1.message.size }.max
 
+        spinners = TTY::Spinner::Multi.new("[:spinner] up")
+        spinners_map = {}
         all_goals.each do |goal|
-          spinner = TTY::Spinner.new("[:spinner] :message   :title")
+          spinner = spinners.register("[:spinner] :message   :title")
           spinner.update(message: format("%-#{max_message_size}s", goal.message))
-          spinner.update(title: "checking")
+          spinner.update(title: "pending")
           spinner.auto_spin
+
+          spinners_map[goal] = spinner
+        end
+
+        all_goals.each do |goal| # rubocop:disable Style/CombinableLoops
+          spinner = spinners_map[goal]
+          spinner.resume
+          spinner.update(title: "checking")
 
           if goal.achieved?
             spinner.update(title: "done (previously achieved)")
