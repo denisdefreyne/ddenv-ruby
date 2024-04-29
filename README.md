@@ -38,6 +38,8 @@ Lastly, run `ddenv up`.
 [✔] Adding .shadowenv.d to .gitignore       ... done (previously achieved)
 [✔] Trusting .shadowenv.d                   ... done (previously achieved)
 [✔] Adding Ruby to shadowenv                ... done (previously achieved)
+[✔] Installing Ruby gem bundler             ... done (previously achieved)
+[✔] Installing bundle                       ... done (previously achieved)
 %
 ```
 
@@ -47,3 +49,4 @@ Now your local developer environment is ready to be used.
 
 - <code>homebrew: <var>PACKAGENAME</var></code> installs the Homebrew package with the given name.
 - <code>ruby: <var>VERSION</var></code> installs the given version of Ruby.
+- <code>bundle</code> runs `bundle install`
