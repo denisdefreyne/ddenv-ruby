@@ -33,6 +33,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "cri", "~> 2.15"
   spec.add_dependency "tty-command", "~> 0.10"
   spec.add_dependency "tty-spinner", "~> 0.9"
 end

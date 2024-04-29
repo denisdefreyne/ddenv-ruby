@@ -2,26 +2,35 @@
 
 module Ddenv
   class CLI
+    ROOT_CMD = Cri::Command.new_basic_root.modify do
+      name        "ddenv"
+      usage       "ddenv [options] [command] [options]"
+      summary     "manage developer environment"
+      description "Manages your local developer environment."
+    end
+
+    ROOT_CMD.define_command("up") do
+      name        "up"
+      usage       "up [options]"
+      summary     "bring up developer environment"
+      description "Brings up the local developer environment to be in line what is described in the ddenv.yaml configuration file."
+
+      flag   :h,  :help, "show help for this command" do |_value, cmd|
+        puts cmd.help
+        exit 0
+      end
+
+      run do |_opts, _args, _cmd|
+        Ddenv::Commands::Up.new.call
+      end
+    end
+
     def initialize(args)
       @args = args
     end
 
     def call
-      if @args.size != 1
-        warn "usage: ddenv [command]"
-        exit 64 # EX_USAGE
-      end
-
-      command_name = @args.first
-      case command_name
-      when "help"
-        Ddenv::Commands::Help.new.call
-      when "up"
-        Ddenv::Commands::Up.new.call
-      else
-        warn "ddenv: unknown command: #{command_name}"
-        exit 64 # EX_USAGE
-      end
+      ROOT_CMD.run(@args)
     end
   end
 end
